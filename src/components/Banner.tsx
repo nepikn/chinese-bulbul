@@ -12,8 +12,8 @@ export default function Banner() {
           className="h-full w-full object-cover"
         />
       </picture>
-      <figcaption className="grid justify-items-end text-white">
-        <p className="w-[285.28px] text-end text-5xl font-bold lg:w-auto">
+      <figcaption className="grid justify-items-end p-6 text-white">
+        <p className="text-end text-5xl font-bold lg:w-auto lg:leading-[1.35]">
           白頭翁 (Chinese bulbul)
         </p>
         <p className="text-center text-lg">

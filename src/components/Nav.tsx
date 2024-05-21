@@ -31,14 +31,16 @@ export default function Nav() {
 
   return (
     <div className="text-center lg:min-w-[345px]">
-      <div className="relative flex h-[87.74px] items-center justify-between">
+      <div className="relative my-[19.61px] flex items-center justify-between pl-[26px] pr-[18px] lg:my-[78.33px]">
         <button onClick={() => setCollapsed(!collapsed)} className="lg:hidden">
           <Icon />
         </button>
-        <h1 className="flex-grow text-xl font-bold">白頭翁不吃小米</h1>
+        <h1 className="flex-grow text-xl font-bold lg:text-3xl">
+          白頭翁不吃小米
+        </h1>
         <a
           href="/"
-          className="aspect-square lg:absolute lg:left-full lg:w-[97.56px] lg:-translate-x-1/2"
+          className="aspect-square w-[48.52px] lg:absolute lg:left-full lg:w-[97.56px] lg:-translate-x-1/2"
         >
           <Icons.logo />
         </a>
@@ -46,7 +48,7 @@ export default function Nav() {
       <ul
         className={clsx(
           'grid justify-center gap-[22px] text-lg',
-          collapsed && 'hidden lg:block',
+          collapsed && 'max-lg:hidden',
         )}
       >
         {links}
