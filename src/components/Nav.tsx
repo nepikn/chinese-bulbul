@@ -1,6 +1,6 @@
-import { useRef, useState } from 'react';
-import Icons from './Icons';
 import clsx from 'clsx';
+import { useState } from 'react';
+import Icons from './Icons';
 
 export default function Nav() {
   const [collapsed, setCollapsed] = useState(true);
