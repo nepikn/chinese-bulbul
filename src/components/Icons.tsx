@@ -40,6 +40,7 @@ export default {
       viewBox="0 0 39 35"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="h-full w-full"
     >
       <rect
         x="0.778931"
@@ -94,5 +95,5 @@ export default {
         strokeWidth="4"
       />
     </svg>
-  )
-}
+  ),
+};

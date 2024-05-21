@@ -13,16 +13,22 @@ export default function Traits() {
       '以果樹的漿果和種子為主食，並時常飛入果園偷吃果實，還會吃嫩葉嫩芽，尤其是胡蝶蘭的嫩葉嫩芽葉，偶爾啄食昆蟲。',
     ],
   ].map(([trait, description]) => (
-    <li key={trait} className="flex justify-evenly">
+    <li key={trait} className="flex justify-between">
       <div className="">
         <h3 className="relative w-[1em] text-4xl font-bold">
           {trait}
           <div className="border-decor/60 absolute left-full top-full aspect-square w-[25px] -translate-x-1/2 -translate-y-1/2 rounded-full border-8" />
         </h3>
       </div>
-      <p className="w-[223.4px]">{description}</p>
+      <p className="w-[223.4px] lg:w-auto">{description}</p>
     </li>
   ));
 
-  return <ul className="grid h-[641.78px] gap-[51px]">{traitItems}</ul>;
+  return (
+    <section className="bg-background grid min-h-[641.78px] justify-center lg:min-h-[367.15px]">
+      <ul className="grid w-[302.24px] gap-[51px] lg:w-auto lg:grid-flow-col lg:gap-[79px]">
+        {traitItems}
+      </ul>
+    </section>
+  );
 }

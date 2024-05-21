@@ -4,13 +4,13 @@ import Traits from './Traits';
 
 function App() {
   return (
-    <div className="font-sans text-[16px]">
-      <Nav />
-      <main>
+    <div className="font-sans lg:flex">
+      <nav className="flex-shrink-0">
+        <Nav />
+      </nav>
+      <main className="flex-grow">
         <Banner />
-        <section className="bg-background">
-          <Traits />
-        </section>
+        <Traits />
       </main>
     </div>
   );

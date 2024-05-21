@@ -1,15 +1,19 @@
-import banner1440 from '/src/assets/banner-1440.jpg'
-import banner375 from '/src/assets/banner-375.jpg'
+import banner1440 from '/src/assets/banner-1440.jpg';
+import banner375 from '/src/assets/banner-375.jpg';
 
 export default function Banner() {
   return (
-    <figure className="relative grid h-[311.4px] w-full items-end">
-      <picture className="absolute -z-10">
-        <source srcSet={banner375} media="(max-width: 376px)" />
-        <img src={banner1440} alt="白頭翁 (Chinese bulbul)" />
+    <figure className="relative grid h-[311.4px] w-full items-end lg:min-h-[634.21px]">
+      <picture className="absolute top-0 -z-10 h-full w-full justify-stretch">
+        <source srcSet={banner375} media="(max-width: 1025px)" />
+        <img
+          src={banner1440}
+          alt="白頭翁 (Chinese bulbul)"
+          className="h-full w-full object-cover"
+        />
       </picture>
       <figcaption className="grid justify-items-end text-white">
-        <p className="w-[285.28px] text-end text-5xl font-bold">
+        <p className="w-[285.28px] text-end text-5xl font-bold lg:w-auto">
           白頭翁 (Chinese bulbul)
         </p>
         <p className="text-center text-lg">
@@ -18,5 +22,5 @@ export default function Banner() {
         </p>
       </figcaption>
     </figure>
-  )
+  );
 }

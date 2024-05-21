@@ -30,24 +30,27 @@ export default function Nav() {
   });
 
   return (
-    <nav className="grid">
-      <div className="flex h-[87.74px] items-center justify-between">
-        <button onClick={() => setCollapsed(!collapsed)}>
+    <div className="text-center lg:min-w-[345px]">
+      <div className="relative flex h-[87.74px] items-center justify-between">
+        <button onClick={() => setCollapsed(!collapsed)} className="lg:hidden">
           <Icon />
         </button>
-        <h1 className="text-xl font-bold">白頭翁不吃小米</h1>
-        <div>
+        <h1 className="flex-grow text-xl font-bold">白頭翁不吃小米</h1>
+        <a
+          href="/"
+          className="aspect-square lg:absolute lg:left-full lg:w-[97.56px] lg:-translate-x-1/2"
+        >
           <Icons.logo />
-        </div>
+        </a>
       </div>
       <ul
         className={clsx(
           'grid justify-center gap-[22px] text-lg',
-          collapsed && 'hidden',
+          collapsed && 'hidden lg:block',
         )}
       >
         {links}
       </ul>
-    </nav>
+    </div>
   );
 }
