@@ -4,7 +4,7 @@ export default {
   content: ['./src/**/*.{mjs,js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      fontFamily: { sans: ['Noto Sans', 'sans-serif'] },
+      fontFamily: { sans: ['Noto Sans TC', 'sans-serif'] },
       colors: {
         selected: '#AA6666',
         background: '#DCCCBC',
