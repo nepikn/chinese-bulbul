@@ -3,7 +3,10 @@
 export default {
   content: ['./src/**/*.{mjs,js,ts,jsx,tsx}'],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: { sans: ['Noto Sans', 'sans-serif'] },
+      colors: { selected: '#AA6666' }
+    }
   },
   plugins: []
 }

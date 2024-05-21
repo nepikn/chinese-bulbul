@@ -14,7 +14,7 @@ export default function Traits() {
     ]
   ].map(([trait, description]) => (
     <li key={trait} className="flex justify-evenly">
-      <h3>{trait}</h3>
+      <h3 className="w-[1em] text-4xl font-bold">{trait}</h3>
       <p className="w-[223.4px]">{description}</p>
     </li>
   ))

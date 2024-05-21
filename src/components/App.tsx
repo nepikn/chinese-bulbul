@@ -4,7 +4,7 @@ import Traits from './Traits'
 
 function App() {
   return (
-    <div className="text-[16px]">
+    <div className="font-sans text-[16px]">
       <Nav />
       <main>
         <Banner />
