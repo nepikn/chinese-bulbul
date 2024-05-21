@@ -1,24 +1,39 @@
-import { useRef } from 'react'
-import Icons from './Icons'
-import clsx from 'clsx'
+import { useRef, useState } from 'react';
+import Icons from './Icons';
+import clsx from 'clsx';
 
 export default function Nav() {
-  const linksRef = useRef<HTMLUListElement>(null)
+  const [collapsed, setCollapsed] = useState(true);
+  const [linkSelected, setLinkSelected] = useState(0);
+  const Icon = Icons[collapsed ? 'hamburgur' : 'x'];
   const links = [
-    { text: '白頭翁的特性', active: true },
-    { text: '白頭翁的故事', active: false },
-    { text: '白頭翁的美照', active: false },
-    { text: '白頭翁的危機', active: false }
-  ].map(({ text, active }) => (
-    <a key={text} className={clsx(active && 'font-bold text-selected')}>
-      {text}
-    </a>
-  ))
+    { id: 0, text: '白頭翁的特性', href: '#' },
+    { id: 1, text: '白頭翁的故事', href: '#' },
+    { id: 2, text: '白頭翁的美照', href: '#' },
+    { id: 3, text: '白頭翁的危機', href: '#' },
+  ].map(({ id, text, href }) => {
+    const selected = id == linkSelected;
+    return (
+      <li>
+        <span className={clsx(selected && 'border-b-2 border-selected')}>
+          <a
+            key={id}
+            href={href}
+            onClick={() => setLinkSelected(id)}
+            className={clsx(selected && 'font-bold text-selected')}
+          >
+            {text}
+          </a>
+        </span>
+      </li>
+    );
+  });
+
   return (
-    <nav className="grid h-[87.74px]">
-      <div className="flex items-center justify-between">
-        <button onClick={() => linksRef.current!.classList.toggle('hidden')}>
-          <Icons.hamburgur />
+    <nav className="grid">
+      <div className="flex h-[87.74px] items-center justify-between">
+        <button onClick={() => setCollapsed(!collapsed)}>
+          <Icon />
         </button>
         <h1 className="text-xl font-bold">白頭翁不吃小米</h1>
         <div>
@@ -26,12 +41,13 @@ export default function Nav() {
         </div>
       </div>
       <ul
-        ref={linksRef}
-        className="grid justify-center text-lg"
-        // className="hidden"
+        className={clsx(
+          'grid justify-center gap-[22px] text-lg',
+          collapsed && 'hidden',
+        )}
       >
         {links}
       </ul>
     </nav>
-  )
+  );
 }

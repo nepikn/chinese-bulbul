@@ -1,6 +1,6 @@
-import Banner from './Banner'
-import Nav from './Nav'
-import Traits from './Traits'
+import Banner from './Banner';
+import Nav from './Nav';
+import Traits from './Traits';
 
 function App() {
   return (
@@ -8,10 +8,12 @@ function App() {
       <Nav />
       <main>
         <Banner />
-        <Traits />
+        <section className="bg-background">
+          <Traits />
+        </section>
       </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

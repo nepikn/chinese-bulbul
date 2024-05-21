@@ -5,8 +5,12 @@ export default {
   theme: {
     extend: {
       fontFamily: { sans: ['Noto Sans', 'sans-serif'] },
-      colors: { selected: '#AA6666' }
-    }
+      colors: {
+        selected: '#AA6666',
+        background: '#DCCCBC',
+        decor: '#AA6666',
+      },
+    },
   },
-  plugins: []
-}
+  plugins: [],
+};
