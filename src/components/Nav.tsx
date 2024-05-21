@@ -14,10 +14,9 @@ export default function Nav() {
   ].map(({ id, text, href }) => {
     const selected = id == linkSelected;
     return (
-      <li>
+      <li key={id}>
         <span className={clsx(selected && 'border-b-2 border-selected')}>
           <a
-            key={id}
             href={href}
             onClick={() => setLinkSelected(id)}
             className={clsx(selected && 'font-bold text-selected')}
@@ -47,7 +46,7 @@ export default function Nav() {
       </div>
       <ul
         className={clsx(
-          'grid justify-center gap-[22px] text-lg',
+          'grid justify-center gap-[22px] pb-[41px] text-lg',
           collapsed && 'max-lg:hidden',
         )}
       >
