@@ -1,3 +1,5 @@
+import { twMerge } from 'tailwind-merge';
+
 export default {
   hamburgur: () => (
     <svg
@@ -33,8 +35,13 @@ export default {
       />
     </svg>
   ),
-  logo: () => (
-    <div className="relative aspect-square w-full overflow-hidden bg-white">
+  logo: ({ className = '' }) => (
+    <div
+      className={twMerge(
+        'relative aspect-square w-full overflow-hidden bg-white',
+        className,
+      )}
+    >
       <div className="absolute left-[19%] top-[22%] h-[68%] w-[78%] rounded-[50%] bg-black"></div>
       <div className="absolute left-[66%] top-[21%] h-[34%] w-[32%] bg-white"></div>
       <div className="absolute left-[47%] top-[22%] h-[27%] w-[30%] rounded-[50%] bg-black"></div>
@@ -43,7 +50,8 @@ export default {
       <div className="absolute left-[25%] top-[34%] h-[33%] w-[60%] -rotate-[12deg] rounded-[50%] bg-white"></div>
       <div className="absolute left-[19%] top-[67%] h-[11%] w-[38%] bg-black"></div>
       <div className="absolute left-[55%] top-[44%] aspect-square w-[12%] rounded-[50%] bg-black"></div>
-      <div className="absolute left-[79%] top-[39%] h-[7%] w-[18%] -rotate-[5deg] rounded-tr-[50%] bg-black"></div>
+      <div className="absolute left-[79%] top-[38%] h-[16%] w-[17%] -rotate-[1deg] rounded-r-[50%] bg-black"></div>
+      <div className="absolute left-[79%] top-[46%] h-[14%] w-[19%] -rotate-[9deg] bg-white"></div>
     </div>
   ),
   logoSvg: () => (

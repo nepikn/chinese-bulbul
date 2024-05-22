@@ -3,7 +3,7 @@ import banner375 from '/src/assets/banner-375.jpg';
 
 export default function Banner() {
   return (
-    <figure className="relative grid h-[311.4px] w-full items-end lg:min-h-[634.21px]">
+    <figure className="relative grid min-h-[311.4px] w-full items-end lg:min-h-[634.21px]">
       <picture className="absolute top-0 -z-10 h-full w-full justify-stretch">
         <source srcSet={banner375} media="(max-width: 1025px)" />
         <img
@@ -13,7 +13,7 @@ export default function Banner() {
         />
       </picture>
       <figcaption className="grid justify-items-end space-y-[10px] p-6 text-white">
-        <p className="text-end text-5xl font-bold leading-[1.35] max-sm:w-[285.28px] lg:w-auto">
+        <p className="text-end text-5xl font-bold leading-[1.35] max-sm:max-w-[285.28px] lg:w-auto">
           白頭翁 (Chinese bulbul)
         </p>
         <p className="text-center text-lg">

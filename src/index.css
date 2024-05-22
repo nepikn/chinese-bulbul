@@ -3,7 +3,4 @@
 @tailwind utilities;
 
 @layer base {
-  a {
-    @apply text-blue-500 transition-all hover:text-blue-400 hover:underline;
-  }
 }
