@@ -34,13 +34,26 @@ export default {
     </svg>
   ),
   logo: () => (
+    <div className="relative aspect-square w-full overflow-hidden bg-white">
+      <div className="absolute left-[19%] top-[22%] h-[68%] w-[78%] rounded-[50%] bg-black"></div>
+      <div className="absolute left-[66%] top-[21%] h-[34%] w-[32%] bg-white"></div>
+      <div className="absolute left-[47%] top-[22%] h-[27%] w-[30%] rounded-[50%] bg-black"></div>
+      <div className="absolute left-[11%] top-[32%] aspect-square w-[94%] rounded-[50%] bg-white"></div>
+      <div className="absolute left-[37%] top-[36%] aspect-square w-[42%] rounded-[50%] bg-black"></div>
+      <div className="absolute left-[25%] top-[34%] h-[33%] w-[60%] -rotate-[12deg] rounded-[50%] bg-white"></div>
+      <div className="absolute left-[19%] top-[67%] h-[11%] w-[38%] bg-black"></div>
+      <div className="absolute left-[55%] top-[44%] aspect-square w-[12%] rounded-[50%] bg-black"></div>
+      <div className="absolute left-[79%] top-[39%] h-[7%] w-[18%] -rotate-[5deg] rounded-tr-[50%] bg-black"></div>
+    </div>
+  ),
+  logoSvg: () => (
     <svg
       width="39"
       height="35"
       viewBox="0 0 39 35"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="h-full w-full"
+      className="h-full w-full opacity-40"
     >
       <rect
         x="0.778931"

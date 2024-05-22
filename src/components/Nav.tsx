@@ -39,7 +39,7 @@ export default function Nav() {
         </h1>
         <a
           href="/"
-          className="aspect-square w-[48.52px] lg:absolute lg:left-full lg:w-[97.56px] lg:-translate-x-1/2"
+          className="aspect-square w-[48.52px] overflow-hidden rounded-full shadow-md shadow-black/25 lg:absolute lg:left-full lg:w-[97.56px] lg:-translate-x-1/2"
         >
           <Icons.logo />
         </a>
